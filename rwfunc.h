@@ -1,11 +1,18 @@
-#ifndef RWFUNC_H
-#define RWFUNC_H
-
-
-class rwfunc
+#include <string>
+using namespace std;
+struct bookshop
 {
-public:
-    rwfunc();
+    int id;
+    string author;
+    string name;
+    int year;
+    string isbn;
+    double price;
 };
+const int N = 10;
 
-#endif // RWFUNC_H
+void readFile(const string &FileName, bookshop* list);
+void writeFile(bookshop* list);
+void show(bookshop *list);
+void about();
+

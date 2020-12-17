@@ -1,9 +1,10 @@
-#include <iostream>
-
-using namespace std;
-
+#include "menu.h"
+#include <windows.h>
 int main()
 {
-    cout << "Hello World!" << endl;
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    bookshop *list=new bookshop[N];
+    menu(list);
     return 0;
 }
