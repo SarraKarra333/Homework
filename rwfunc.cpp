@@ -1,13 +1,13 @@
 #include "rwfunc.h"
-#include <fstream>
-#include <iostream>
+#include <fstream>  //подклчаем заголовочный файл для чтения-записи
+#include <iostream> //подклчаем заголовочный файл для ввода-вывода
 
 void readFile(const string &FileName, bookshop *list)
 {
-    ifstream file(FileName);
-    if (!file)
+    ifstream file(FileName);  //открываем файл в конструкторе
+    if (!file.is_open())    //проверка открытия файла логическим выражением
     {
-        cerr << "Ошибка в открытии файла!" << endl;
+        cerr << "Ошибка в открытии файла!" << endl;  //вывод ошибки
     }
     else
     {
@@ -25,7 +25,7 @@ void readFile(const string &FileName, bookshop *list)
         }
         cout << "Данные считаны" << endl;
     }
-    file.close();
+    file.close();   //открытый файл должен быть закрыт
 }
 
 void writeFile(bookshop *list)

@@ -1,5 +1,6 @@
 #include "menu.h"
 #include <windows.h>
+
 int main()
 {
     SetConsoleCP(1251);
