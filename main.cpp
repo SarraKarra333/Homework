@@ -5,7 +5,7 @@ int main()
 {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
-    bookshop *list=new bookshop[N];
+    autoshop *list = new autoshop[N];
     menu(list);
     return 0;
 }

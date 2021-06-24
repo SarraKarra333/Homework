@@ -1,18 +1,22 @@
-#include <string> //подключение файла из стандартного каталога
-using namespace std; //пространство имен для паботы с строками
-struct bookshop  //создание шаблона структуры
+#include <string>
+using namespace std;
+struct autoshop
 {
     int id;
-    string author;
-    string name;
-    int year;
-    string isbn;
-    double price;
+    int engine;
+    int carcaseNum;
+    string car;
+    int capacity;
+    char classOfTheCar;
+    string typeOfCarcase;
+    int price;
 };
-const int N = 10;  //N=количество позиций магазина
-
-void readFile(const string &FileName, bookshop* list); //протатипы функций
-void writeFile(bookshop* list);
-void show(bookshop *list);
+void RE_WRITE(const char &FileName);
+const int N = 100;
+void readFile(const string &FileName, autoshop* list);
+//autoshop* recreationOfArray(const string &FileName, autoshop *list);
+void create_note_db(const string &FileName, autoshop *list);
+void deleteNote(const string &FileName, autoshop* list);
+void createFile(autoshop* list);
+void show(autoshop *list);
 void about();
-

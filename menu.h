@@ -1,3 +1,3 @@
-
 #include "rwfunc.h"
-void menu(bookshop *list);
+void menu(autoshop *list);
+
